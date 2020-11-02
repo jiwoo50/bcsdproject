@@ -8,8 +8,8 @@ public class EnemyController : MonoBehaviour
     public bool vertical;
     public float changeTime = 3.0f;
     public ParticleSystem SmokeEffects;
-    bool broken=false;
-    private new Rigidbody2D rigidbody2D;
+    bool broken=true;
+    Rigidbody2D rigidbody2D;
     float timer;
     int direction = 1;
     Animator animator;
@@ -22,20 +22,25 @@ public class EnemyController : MonoBehaviour
     }
     private void Update()
     {
+        if (!broken)
+        {
+            return;
+        }
         timer -= Time.deltaTime;
         if (timer < 0)
         {
             direction = -direction;
             timer = changeTime;
         }
-        if (!broken)
-        {
-            return;
-        }
+       
     }
     // Update is called once per frame
     void FixedUpdate()
     {
+        if (!broken)
+        {
+            return;
+        }
         Vector2 position = rigidbody2D.position;
         if (vertical)
         {
@@ -50,10 +55,7 @@ public class EnemyController : MonoBehaviour
             animator.SetFloat("MoveX", direction);
             animator.SetFloat("MoveY", 0);
         }
-        if (!broken)
-        {
-            return;
-        }
+       
         rigidbody2D.MovePosition(position);
     }
     void OnCollisionEnter2D(Collision2D other)
@@ -67,9 +69,10 @@ public class EnemyController : MonoBehaviour
     }
     public void Fix()
     {
-        broken = true;
+        SmokeEffects.Stop();
+        broken = false;
         rigidbody2D.simulated = false;
         animator.SetTrigger("Fixed");
-        SmokeEffects.Stop();
+       
     }
 }

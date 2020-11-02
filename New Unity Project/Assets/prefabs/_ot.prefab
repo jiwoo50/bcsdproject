@@ -87,7 +87,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
+  m_SpriteSortPoint: 1
 --- !u!61 &7363102009450431978
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -150,7 +150,7 @@ MonoBehaviour:
   speed: 4
   vertical: 0
   changeTime: 4
-  SmokeEffects: {fileID: 0}
+  SmokeEffects: {fileID: 3037075723629061770}
 --- !u!95 &1190544533049918672
 Animator:
   serializedVersion: 3
@@ -334,5 +334,10 @@ PrefabInstance:
 --- !u!4 &3037075723629061773 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2574708431301022539, guid: 6d170010d0e5eeb418823edb776d2a34, type: 3}
+  m_PrefabInstance: {fileID: 693255184339039686}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &3037075723629061770 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 2574708431301022540, guid: 6d170010d0e5eeb418823edb776d2a34, type: 3}
   m_PrefabInstance: {fileID: 693255184339039686}
   m_PrefabAsset: {fileID: 0}

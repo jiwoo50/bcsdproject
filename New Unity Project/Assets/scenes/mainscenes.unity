@@ -13857,17 +13857,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2720319726824497740, guid: a341dd9d2583a6043b754ac590f75691, type: 3}
-      propertyPath: m_SleepingMode
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3705905320268957007, guid: a341dd9d2583a6043b754ac590f75691, type: 3}
       propertyPath: m_Name
       value: CogBullet
-      objectReference: {fileID: 0}
-    - target: {fileID: 6634157671556159602, guid: a341dd9d2583a6043b754ac590f75691, type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9034890287135458287, guid: a341dd9d2583a6043b754ac590f75691, type: 3}
       propertyPath: m_LocalPosition.x
@@ -13979,10 +13971,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3694181420900787032, guid: 3df299273f4aac6419d19f3f9dc80cd5, type: 3}
-      propertyPath: projectilePrefab
-      value: 
-      objectReference: {fileID: 3705905320268957007, guid: a341dd9d2583a6043b754ac590f75691, type: 3}
     - target: {fileID: 3694181420900787035, guid: 3df299273f4aac6419d19f3f9dc80cd5, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2

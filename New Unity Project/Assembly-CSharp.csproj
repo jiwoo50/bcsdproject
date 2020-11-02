@@ -57,9 +57,9 @@
     <Compile Include="Assets\scripts\DamageZone.cs" />
     <Compile Include="Assets\scripts\rubycontroller.cs" />
     <Compile Include="Assets\scripts\Projectile.cs" />
+    <Compile Include="Assets\scripts\NonPlayerCharacter.cs" />
     <Compile Include="Assets\scripts\EnemyController.cs" />
     <Compile Include="Assets\scripts\HealthCollectible.cs" />
-    <Compile Include="Assets\scripts\NonPlayerCharacter.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

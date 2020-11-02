@@ -5,16 +5,20 @@ using UnityEngine;
 public class rubycontroller: MonoBehaviour
 {
     public float speed = 3.0f;
+
     public int maxHealth = 5;
-    public float timeInvincible = 2.0f;
+
+    
+
     public GameObject projectilePrefab;
     public int health { get { return currentHealth; } }
     int currentHealth;
 
+    public float timeInvincible = 2.0f;
     bool isInvincible;
     float invincibleTimer;
 
-    private new Rigidbody2D rigidbody2D;
+    Rigidbody2D rigidbody2D;
     float horizontal;
     float vertical;
 
@@ -25,8 +29,8 @@ public class rubycontroller: MonoBehaviour
     void Start()
     {
         rigidbody2D = GetComponent<Rigidbody2D>();
-        currentHealth = maxHealth;
         animator = GetComponent<Animator>();
+        currentHealth = maxHealth;
         audioSource = GetComponent<AudioSource>();
     }
     private void Update()
@@ -95,7 +99,6 @@ public class rubycontroller: MonoBehaviour
         Projectile projectile = projectileObject.GetComponent<Projectile>();
         projectile.Launch(lookDiretion, 300);
         animator.SetTrigger("Launch");
-
     }
     public void PlaySound(AudioClip clip)
     {
