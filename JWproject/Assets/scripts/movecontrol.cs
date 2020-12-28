@@ -28,14 +28,14 @@ public class movecontrol : MonoBehaviour
         position.y = position.y + 10.0f * vertical * Time.deltaTime;
         Vector2 move = new Vector2(horizontal, vertical);
         Vector2 lookDirection = new Vector2(0, 0);
-        lookDirection.Set(move.x, move.y);
-        lookDirection.Normalize();
+        
         animator.SetFloat("MOVE X", lookDirection.x);
-        animator.SetFloat("MOVE Y", lookDirection.y);/*
+        animator.SetFloat("MOVE Y", lookDirection.y);
         if (!Mathf.Approximately(move.x, 0.0f) || !Mathf.Approximately(move.y, 0.0f))
         {
-            
-        }*/
+            lookDirection.Set(move.x, move.y);
+            lookDirection.Normalize();
+        }
         
         transform.position = position;
     }
